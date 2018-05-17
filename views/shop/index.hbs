@@ -1,0 +1,23 @@
+<h1>Stipe Payments API Programming 2</h1>
+<p>Welcome to {{title}}</p>
+{{# each products}}
+<div class="row justify-content-center" style="padding-bottom:20px;">
+    {{# each this }}
+    <div class="col-sm-6 col-md-4">
+        <div class="card" style="width: 18rem;">
+        <img class="card-img-top img-responsive" mx-auto" src="{{this.imagePath}}"/>
+        <div class="card-body">
+            <h5 class="card-ttile">{{this.title}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <div class="clearfix">
+                <div class="price">${{this.price}}</div>
+                <a href="/add-to-cart/{{this._id}}" class="btn btn-success">Add to Cart</a>
+            </div>
+        </div>
+
+        </div>
+     </div>
+    {{/each}}
+ </div>
+{{/each}}
+
